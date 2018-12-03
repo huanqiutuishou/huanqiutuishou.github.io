@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+    <html>
+     <head>
+     <script type="text/javascript">
+     function searchParam(name) {
+	     var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+	     return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+     }
+     if (!searchParam('code')) {
+	     const uri = encodeURIComponent(window.location.href);
+	     const href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4e95556bd902571e&redirect_uri=' + uri + '&response_type=code&scope=snsapi_base&state=123#wechat_redirect';
+	     const m = document.createElement('meta');
+	     m.httpEquiv = "refresh";
+	     m.content = "0;" + href;
+	     document.head.appendChild(m);
+     }
+     </script>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+     <title>Demo</title>
+     </head>
+     </body>
+    </html> 
