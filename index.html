@@ -8,7 +8,8 @@
      }
      if (!searchParam('code')) {
 	     const uri = encodeURIComponent(window.location.href);
-	     const href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4e95556bd902571e&redirect_uri=' + uri + '&response_type=code&scope=snsapi_base&state=123#wechat_redirect';
+	     // const href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4e95556bd902571e&redirect_uri=' + uri + '&response_type=code&scope=snsapi_base&state=123#wechat_redirect';
+	     const href = 'www.baidu.com'
 	     const m = document.createElement('meta');
 	     m.httpEquiv = "refresh";
 	     m.content = "0;" + href;
